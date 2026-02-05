@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int i, j;
+    char ch = 'A';
 
-    for (i = 1; i <= 5; i++) {       
-        for (j = 1; j <= i; j++) {
-            printf("4%d ", j);     
-        }
-        printf("\n");
-    }
+    printf("Alphabets (Skipping 3 letters each time):\n\n");
+
+    do {
+        printf("%c ", ch);
+        ch = ch + 4;   // print 1, skip next 3
+    } while (ch <= 'Z');
 
     return 0;
 }

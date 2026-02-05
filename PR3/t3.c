@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    int i, j, space;
+    int num, firstDigit, lastDigit;
 
-    for (i = 5; i >= 1; i--) {
+    printf("Enter a number: ");
+    scanf("%d", &num);
 
-   
-        for (space = 1; space < i; space++) {
-            printf(" ");
-        }
+    lastDigit = num % 10;   // get last digit
 
-    \
-        for (j = i; j <= 5; j++) {
-            printf("%d", j);
-        }
-
-        printf("\n");
+    // find first digit
+    while (num >= 10) {
+        num = num / 10;
     }
+    firstDigit = num;
+
+    printf("First Digit = %d\n", firstDigit);
+    printf("Last Digit = %d\n", lastDigit);
+    printf("Sum of First and Last Digit = %d\n", firstDigit + lastDigit);
 
     return 0;
 }

@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int marks;
+
+    printf("Enter your marks (0 - 100): ");
+    scanf("%d", &marks);
+
+    (marks >= 90 && marks <= 100) ? printf("Grade A : Excellent work\n") :
+    (marks >= 80) ? printf("Grade B : Well done\n") :
+    (marks >= 70) ? printf("Grade C : Good job\n") :
+    (marks >= 60) ? printf("Grade D : You passed\n") :
+    (marks >= 50) ? printf("Grade E : Needs improvement\n") :
+    (marks >= 0)  ? printf("Grade F : Failed\n") :
+                    printf("Invalid marks\n");
+
+    return 0;
+}

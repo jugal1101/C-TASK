@@ -1,15 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    int i, j, num = 11;
+    int num, count = 0;
 
-    for (i = 1; i <= 4; i++) {      
-        for (j = 1; j <= i; j++) {
-            printf("%d ", num);
-            num++;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // If number is 0, it has 1 digit
+    if (num == 0) {
+        count = 1;
+    } else {
+        while (num != 0) {
+            num = num / 10;
+            count++;
         }
-        printf("\n");
     }
+
+    printf("Total number of digits = %d\n", count);
 
     return 0;
 }
